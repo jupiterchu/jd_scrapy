@@ -1,0 +1,65 @@
+2021-01-04 01:08:30 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET https://search.jd.com/robots.txt>: a
+Traceback (most recent call last):
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy\core\downloader\middleware.py", line 36, in process_request
+    response = yield deferred_from_coro(method(request=request, spider=spider))
+  File "C:\Users\Jove\PycharmProjects\MyScrapy\Myscrapy\Myscrapy\middlewares.py", line 24, in process_request
+    raise Exception('a')
+Exception: a
+2021-01-04 21:52:05 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-04 21:52:05 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy\crawler.py", line 86, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy\crawler.py", line 98, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy_redis\spiders.py", line 154, in from_crawler
+    obj.setup_redis(crawler)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy_redis\spiders.py", line 70, in setup_redis
+    self.server = connection.from_settings(crawler.settings)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy_redis\connection.py", line 60, in get_redis_from_settings
+    return get_redis(**params)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy_redis\connection.py", line 88, in get_redis
+    return redis_cls.from_url(url, **kwargs)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\redis\client.py", line 696, in from_url
+    connection_pool = ConnectionPool.from_url(url, db=db, **kwargs)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\redis\connection.py", line 1034, in from_url
+    'port': int(url.port or 6379),
+  File "C:\Users\Jove\AppData\Local\Programs\Python\Python37-32\lib\urllib\parse.py", line 169, in port
+    port = int(port, 10)
+ValueError: invalid literal for int() with base 10: 'Wecf09'
+2021-01-04 21:52:58 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-04 21:52:58 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy\crawler.py", line 89, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+redis.exceptions.AuthenticationError: Authentication required.
+2021-01-04 21:54:26 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-01-04 21:54:26 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy\crawler.py", line 86, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy\crawler.py", line 98, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy_redis\spiders.py", line 154, in from_crawler
+    obj.setup_redis(crawler)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy_redis\spiders.py", line 70, in setup_redis
+    self.server = connection.from_settings(crawler.settings)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy_redis\connection.py", line 60, in get_redis_from_settings
+    return get_redis(**params)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\scrapy_redis\connection.py", line 88, in get_redis
+    return redis_cls.from_url(url, **kwargs)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\redis\client.py", line 696, in from_url
+    connection_pool = ConnectionPool.from_url(url, db=db, **kwargs)
+  File "C:\Users\Jove\PycharmProjects\geeke\venv\lib\site-packages\redis\connection.py", line 1034, in from_url
+    'port': int(url.port or 6379),
+  File "C:\Users\Jove\AppData\Local\Programs\Python\Python37-32\lib\urllib\parse.py", line 169, in port
+    port = int(port, 10)
+ValueError: invalid literal for int() with base 10: 'Wecf09'
